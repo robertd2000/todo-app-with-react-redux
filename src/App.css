@@ -13,3 +13,23 @@
 .hide {
   display: none;
 }
+
+.container {
+  margin: 10px auto;
+  width: 750px;
+  min-height: 940px;
+  border-right: 1px solid rgb(158, 158, 158);
+  border-left: 1px solid rgb(173, 173, 173);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+  padding: 10px;
+}
+
+.item__inner {
+  width: 700px;
+  margin: 10px auto;
+  border-bottom: 1px solid rgb(83, 82, 82);
+}
+
+.btn {
+  margin: 10px;
+}

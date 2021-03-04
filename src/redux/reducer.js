@@ -1,4 +1,4 @@
-import {ADD_TODO, INPUT_VALUE, DONE_TODO, SHOW_MODAL, FIND, FIND_VALUE} from './actions';
+import {ADD_TODO, INPUT_VALUE, DONE_TODO, SHOW_MODAL, FIND, FIND_VALUE, SHOW_DONE_TODOS, SHOW_ALL_TODOS} from './actions';
 
 const initialState = {
     todos: [
@@ -68,6 +68,30 @@ const reducer = (state=initialState, action) => {
                 ...state,
                 todos: state.todos.map(i => {
                     if (i.text.toLowerCase().startsWith(state.findValue.toLowerCase())) {
+                        console.log(i);
+                        return {...i, show: true}
+                    } else {
+                        return {...i, show: false}
+                    }
+                })
+            }
+        }
+
+        case SHOW_ALL_TODOS: {
+            return {
+                ...state,
+                todos: state.todos.map(i => {
+                        return {...i, show: true
+                    }
+                })
+            }
+        }
+
+        case SHOW_DONE_TODOS: {
+            return {
+                ...state,
+                todos: state.todos.map(i => {
+                    if (i.done) {
                         console.log(i);
                         return {...i, show: true}
                     } else {

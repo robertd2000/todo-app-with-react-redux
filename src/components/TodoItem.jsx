@@ -10,7 +10,7 @@ const TodoItem = (props) => {
     }
 
     return (
-        <div className={props.show ? '' : 'hide'}>
+        <div className={props.show ? 'item__inner' : 'hide'}>
             <div className={props.done ? 'done' : ''} onClick={() => doneHandle(props.id)}>
                 {props.text}
             </div>

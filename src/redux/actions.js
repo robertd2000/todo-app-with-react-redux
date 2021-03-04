@@ -5,6 +5,10 @@ export const FIND_VALUE = 'FIND_VALUE'
 export const DONE_TODO = 'DONE_TODO'
 export const SHOW_MODAL = 'SHOW_MODAL'
 export const FIND = 'FIND'
+export const SHOW_DONE_TODOS = 'SHOW_DONE_TODOS'
+export const SHOW_ALL_TODOS = 'SHOW_ALL_TODOS'
+
+
 
 
 let nextTodoId = Math.random();
@@ -47,4 +51,12 @@ export const setFindValue = text => ({
     payload: {
         text
     }
+})
+
+export const setShowDoneTodos = () => ({
+    type: SHOW_DONE_TODOS,
+})
+
+export const setShowAllTodos = () => ({
+    type: SHOW_ALL_TODOS,
 })
